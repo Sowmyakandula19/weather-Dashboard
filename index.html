@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Weather Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="weather-app">
+    <!-- Background Canvas -->
+    <canvas id="weather-canvas"></canvas>
+
+    <!-- Main container -->
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Anime Weather</h1>
+        <p class="subtitle">Stay kawaii in any weather! 🌸</p>
+        <div class="search-container">
+          <input type="text" id="city-search" placeholder="Enter city name..." class="search-input">
+          <button id="search-btn" class="search-btn">🔍</button>
+        </div>
+      </header>
+
+      <!-- Current Weather -->
+      <section class="current-weather">
+        <div class="weather-card">
+          <div class="weather-info">
+            <h2 id="city-name" class="city-name">Tokyo, JP</h2>
+            <p id="current-date" class="current-date">Loading...</p>
+            <p id="weather-desc" class="weather-desc">—</p>
+          </div>
+          <div class="weather-main">
+            <div id="weather-icon" class="weather-icon">☀️</div>
+            <div class="temperature">
+              <span id="current-temp" class="current-temp">22</span>
+              <span class="temp-unit">°C</span>
+            </div>
+            <p class="feels-like">Feels like <span id="feels-like">23</span>°C</p>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-card">
+            <span class="detail-icon">💧</span>
+            <div class="detail-info">
+              <p class="detail-label">Humidity</p>
+              <p class="detail-value" id="humidity">65%</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-icon">💨</span>
+            <div class="detail-info">
+              <p class="detail-label">Wind Speed</p>
+              <p class="detail-value" id="wind-speed">3.1 m/s</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-icon">📊</span>
+            <div class="detail-info">
+              <p class="detail-label">Pressure</p>
+              <p class="detail-value" id="pressure">1013 hPa</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <span class="detail-icon">👀</span>
+            <div class="detail-info">
+              <p class="detail-label">Visibility</p>
+              <p class="detail-value" id="visibility">10 km</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forecast -->
+      <section class="forecast-section">
+        <h3 class="forecast-title">🗓️ 5-Day Forecast</h3>
+        <div id="forecast-container" class="forecast-container"></div>
+        <div id="hourly-weather"></div>
+      </section>
+
+      <div class="time-indicator">
+        <span id="time-label" class="time-label">Afternoon</span>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+          <div class="loading-anime">⛩️</div>
+          <p>Loading weather magic...</p>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div id="error-overlay" class="error-overlay hidden">
+        <div class="error-content">
+          <div class="error-icon">😿</div>
+          <p id="error-message">Failed to load weather data</p>
+          <button id="retry-btn" class="retry-btn">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Best Day Button -->
+<a href="about.html" id="bestday-btn">Best Day</a>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
