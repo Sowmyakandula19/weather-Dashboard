@@ -19,7 +19,8 @@ Live Demo 🌐
 You can view the live project here:
 https://final-project-ibm.vercel.app
 
-Screenshots 🖼️
+Screenshots <img width="3734" height="1871" alt="image" src="https://github.com/user-attachments/assets/3d809f9a-1a1c-4c20-9b3a-8cd1346d19e2" />
+
 
 Technologies Used 💻
 
